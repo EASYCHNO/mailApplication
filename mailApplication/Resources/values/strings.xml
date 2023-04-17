@@ -1,0 +1,7 @@
+<resources>
+	<string name="app_name">Меню навигации</string>
+	<string name="action_settings">Настройки</string>
+	<string name="drawer_open">Открытие</string>
+	<string name="drawer_close">Закрытие</string>
+	<string name="mesto_zag">Место для загаловка</string>
+</resources>

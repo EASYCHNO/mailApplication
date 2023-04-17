@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<group android:checkableBehavior="single">
+		<item
+		android:id="@+id/action_share" android:title="Поделиться"
+		android:icon="@android:drawable/ic_menu_share" />
+		<item android:id="@+id/save_settings"
+		android:title="Сохранить"
+		android:icon="@android:drawable/ic_menu_save" />
+	</group>
+	<item android:title="Еще меню">
+		<menu>
+			<group android:checkableBehavior="single">
+				<item android:id="@+id/open_camera"
+				android:title="Камера"
+				android:icon="@android:drawable/ic_menu_camera"/>
+			</group>
+		</menu>
+	</item>
+</menu>
