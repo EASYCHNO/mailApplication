@@ -5,6 +5,9 @@ using Android.Support.V4.Widget;
 using V7Toolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Support.Design.Widget;
 using Android.Widget;
+using Android.Provider;
+using Android.Content;
+using Android.Webkit;
 
 namespace mailApplication
 {
@@ -33,6 +36,18 @@ namespace mailApplication
             {
                 Toast.MakeText(this, "Запуск камеры", ToastLength.Long).Show();
             };
+
+            var fab1 = FindViewById<FloatingActionButton>(Resource.Id.fab);
+            fab.Click += (o, e) =>
+            {
+                Intent intent = new Intent(MediaStore.ActionImageCapture);
+                StartActivityForResult(intent, 0);
+            };
+
+            WebView webView = new WebView(this);
+            LinearLayout container = (LinearLayout)FindViewById(Resource.Id.linearLayout1);
+            container.AddView(webView);
+            webView.LoadUrl("https://www.google.com");
         }
         void setupDrawerContent(NavigationView navigationView)
         {
